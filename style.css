@@ -75,32 +75,50 @@ body[data-theme='light'] nav .logo {
     color: var(--accent-color-light);
 }
 
-nav ul {
+/* Sidebar-like Nav (desktop) */
+nav ul#primary-nav {
     list-style: none;
     display: flex;
+    gap: 1.25rem;
 }
 
-nav ul li {
-    margin-left: 2rem;
-}
-
-nav ul li a {
+nav ul#primary-nav li a {
     text-decoration: none;
     color: var(--text-color-dark);
-    font-weight: 500;
+    font-weight: 700; /* Bold text */
+    display: inline-block;
+    width: 100%; /* Fill widest of sidebar when stacked */
     transition: color var(--transition-speed) ease;
 }
 
-nav ul li a:hover {
+nav ul#primary-nav li a:hover {
     color: var(--accent-color-dark);
 }
 
-body[data-theme='light'] nav ul li a {
+body[data-theme='light'] nav ul#primary-nav li a {
     color: var(--text-color-light);
 }
 
-body[data-theme='light'] nav ul li a:hover {
+body[data-theme='light'] nav ul#primary-nav li a:hover {
     color: var(--accent-color-light);
+}
+
+/* Hamburger button */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.hamburger-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+    margin: 5px 0;
 }
 
 #theme-toggle {
@@ -524,10 +542,46 @@ body[data-theme='light'] footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Simple hide for mobile, can be replaced with a burger menu */
+@media (max-width: 1024px) {
+    /* Convert to slide-in sidebar on tablet/mobile */
+    nav {
+        justify-content: space-between;
     }
+    #hamburger {
+        display: block;
+        color: inherit;
+    }
+    nav ul#primary-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 78%; /* does not fill whole space on mobile */
+        max-width: 320px;
+        min-width: 260px;
+        background-color: rgba(10, 25, 47, 0.96);
+        backdrop-filter: blur(8px);
+        display: flex;
+        flex-direction: column;
+        padding: 100px 1.25rem 1.25rem; /* account for fixed header */
+        gap: 0.5rem;
+        transform: translateX(-100%);
+        transition: transform var(--transition-speed) ease;
+        z-index: 1100;
+    }
+    body[data-theme='light'] nav ul#primary-nav {
+        background-color: rgba(255, 255, 255, 0.96);
+    }
+    nav ul#primary-nav.open {
+        transform: translateX(0);
+    }
+    nav ul#primary-nav li a {
+        padding: 0.75rem 0.5rem;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }

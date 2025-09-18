@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav ul li a');
+    const primaryNav = document.getElementById('primary-nav');
+    const hamburger = document.getElementById('hamburger');
     const themeToggle = document.getElementById('theme-toggle');
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
@@ -26,8 +28,38 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
+
+            // Close mobile sidebar after navigating
+            if (primaryNav && hamburger && primaryNav.classList.contains('open')) {
+                primaryNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
         });
     });
+
+    // Hamburger toggle for mobile sidebar
+    if (hamburger && primaryNav) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = primaryNav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && primaryNav.classList.contains('open')) {
+                primaryNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Ensure correct state on resize (close when leaving mobile)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024 && primaryNav.classList.contains('open')) {
+                primaryNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
 
     // Typewriter Effect
     const nameElement = document.getElementById('typewriter-name');
