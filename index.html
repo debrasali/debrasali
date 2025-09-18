@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasali - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+    <header>
+        <nav>
+            <div class="logo">Brasali</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume-section">Resume</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <img src="assets/profile.png" alt="Brasali Deandro Elbert" class="profile-image">
+                <h1 id="typewriter-name">Brasali Deandro Elbert</h1>
+                <p id="typewriter-tagline">A Passionate Computer Science Student</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>My passion for Computer Science started when I was in high school. I am particularly interested in Software Engineering, Artificial Intelligence, and Machine Learning.</p>
+            <p>My career aspiration is to become a leading software engineer at a tech-innovative company, contributing to projects that solve real-world problems.</p>
+            <p>A little anecdote: "I once spent a whole weekend debugging a single line of code, and the satisfaction of finally fixing it was immense! It taught me the value of perseverance and attention to detail."</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul>
+                        <li>React.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Cursor</li>
+                    </ul>
+                </div>
+                <!-- <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>SQL</li>
+                    </ul>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="assets/projects/project1_placeholder.png" alt="Project 1 Screenshot">
+                    <h3>Financial Dashboard with React.js</h3>
+                    <p class="project-tech">Technologies: React.js, Redux Toolkit, Chart.js, Tailwind CSS, TypeScript</p>
+                    <p>A client-side financial planning application built to provide users with tools for expense tracking, savings projection, and interactive goal planning.</p>
+                    <div class="project-links">
+                        <a href="https://debrasali.github.io/Financial-Dashboard/" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Activities</h2>
+            <div class="experience-item">
+                <h3>Media Team Coordinator</h3>
+                <p class="experience-duration">Aug 2025 - Present | Lap Chee College, HKU Jockey Club Student Village III, Hong Kong</p>
+                <ul>
+                    <li>Coordinated 20 team members to ensure seamless coverage of events, evaluated and recruited new members.</li>
+                    <li>Capture high-quality photographs in all major college events such as High Table Dinners and Welcoming Receptions to document the occasion.</li>
+                    <li>Collaborate with the event management team to ensure seamless execution of events, aligning with the event planning and logistics.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>School Peer Mentoring Tutor</h3>
+                <p class="experience-duration">Aug 2022 - Apr 2024 | SMAK 1 PENABUR Jakarta, Indonesia</p>
+                <ul>
+                    <li>Conducted tutorial classes for 20+ students in Chemistry and Physics, focusing on preparation for exams.</li>
+                    <li>Provided personalized instruction to help students improve their understanding and retake failed courses, achieving a 100% success rate.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Engineering in Computer Science</h3>
+                <p>The University of Hong Kong | Hong Kong SAR</p>
+                <p>Expected Graduation: May 2028</p>
+                <p>Relevant Coursework: Data Structures and Algorithms, Object Oriented Programming, aComputer Programming, Linear Algebra, Calculus, and Statistics.</p>
+            </div>
+        </section>
+
+        <section id="resume-section">
+            <h2>Resume</h2>
+            <p>View or download my resume to learn more about my qualifications and experiences.</p>
+            <a href="assets/resume/my_resume.pdf" download="DeandroElbert_Brasali_Resume.pdf" class="btn btn-primary">Download CV/Resume</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <!-- <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p id="form-status"></p>
+            </form> -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/deandro-elbert-brasali-99b819334/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a> 
+                <a href="https://github.com/debrasali/" target="_blank" aria-label="GitHub Profile">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Deandro Elbert Brasali. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
